@@ -49,26 +49,26 @@ defmodule EaasyServerWeb.Schema do
     end
   end
 
-  mutation do
-    @desc "Create an airline"
-    field :create_airline, :airline do
-      arg :name, non_null(:string)
-      resolve &EaasyServerWeb.Resolvers.FlightResolver.create_airline/3
-    end
+  # mutation do
+  #   @desc "Create an airline"
+  #   field :create_airline, :airline do
+  #     arg :name, non_null(:string)
+  #     resolve &EaasyServerWeb.Resolvers.FlightResolver.create_airline/3
+  #   end
 
-    @desc "Create a flight"
-    field :create_flight, :flight do
-      arg :year, non_null(:integer)
-      arg :month, non_null(:integer)
-      arg :day, non_null(:integer)
-      arg :dep_time, :float
-      arg :arr_time, :float
-      arg :flight_number, non_null(:string)
-      arg :origin, non_null(:string)
-      arg :dest, non_null(:string)
-      arg :carrier, :string
-      arg :airline_id, non_null(:id)
-      resolve &EaasyServerWeb.Resolvers.FlightResolver.create_flight/3
-    end
-  end
+  #   @desc "Create a flight"
+  #   field :create_flight, :flight do
+  #     arg :year, non_null(:integer)
+  #     arg :month, non_null(:integer)
+  #     arg :day, non_null(:integer)
+  #     arg :dep_time, :float
+  #     arg :arr_time, :float
+  #     arg :flight_number, non_null(:string)
+  #     arg :origin, non_null(:string)
+  #     arg :dest, non_null(:string)
+  #     arg :carrier, :string
+  #     arg :airline_id, non_null(:id)
+  #     resolve &EaasyServerWeb.Resolvers.FlightResolver.create_flight/3
+  #   end
+  # end
 end
