@@ -1,10 +1,73 @@
-/_build
-/cover
-/deps
-/doc
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where third-party dependencies like ExDoc output generated docs.
+/doc/
+
+# Ignore .fetch files in case you like to edit your project deps locally.
 /.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
 erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
 *.ez
+
+# Ignore package tarball (built via "mix hex.build").
+eaasy_server-*.tar
+
+# Temporary files, for example, from tests.
+/tmp/
+
+# Ignore compiled beam files
 *.beam
-/config/*.secret.exs
+
+# Ignore Elixir LS (Language Server) files
 .elixir_ls/
+
+# Since we are building assets from assets/,
+# we ignore priv/static. You may want to comment
+# this depending on your deployment strategy.
+/priv/static/
+
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+/config/*.secret.exs
+
+# Ignore assets that are produced by build tools.
+/priv/static/assets/
+
+# Ignore uploaded files in development
+/priv/uploads/
+
+# Ignore digested assets cache.
+/priv/static/cache_manifest.json
+
+# In case you use Node.js/npm in your project
+/assets/node_modules/
+npm-debug.log
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# macOS
+.DS_Store
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.envrc
