@@ -37,6 +37,7 @@ defmodule EaasyServerWeb.Schema do
       arg :carrier, :string
       arg :from_date, :date
       arg :to_date, :date
+      arg :departure_time, :string
       arg :limit, :integer, default_value: 100
       arg :offset, :integer, default_value: 0
       resolve &EaasyServerWeb.Resolvers.FlightResolver.list_flights/3

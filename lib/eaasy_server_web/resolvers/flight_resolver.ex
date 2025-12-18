@@ -18,7 +18,8 @@ defmodule EaasyServerWeb.Resolvers.FlightResolver do
       dest: Map.get(args, :dest),
       carrier: Map.get(args, :carrier),
       from_date: Map.get(args, :from_date),
-      to_date: Map.get(args, :to_date)
+      to_date: Map.get(args, :to_date),
+      departure_time: Map.get(args, :departure_time)
     }
     |> Enum.reject(fn {_k, v} -> is_nil(v) end)
     |> Map.new()
